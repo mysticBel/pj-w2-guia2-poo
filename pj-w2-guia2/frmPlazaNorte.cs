@@ -38,7 +38,12 @@ namespace pj_w2_guia2
             PlazaNorte objP = new PlazaNorte();
             objP.numAlquiler = int.Parse(lblNumero.Text);
             objP.equipo = cboEquipo.Text;
-            objP.numDias = int.Parse(txtDias.Text);
+            //Si no registra dias, que se ejecute lo del constructor
+            if (!txtDias.Text.Equals("")) 
+            {
+                objP.numDias = int.Parse(txtDias.Text);
+            }
+            
 
             double precio = objP.asignarPrecio();
             double subtotal = objP.calcularSubtotal();
