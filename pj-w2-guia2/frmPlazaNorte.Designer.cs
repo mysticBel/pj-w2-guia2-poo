@@ -99,6 +99,7 @@
             // 
             // cboEquipo
             // 
+            this.cboEquipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEquipo.FormattingEnabled = true;
             this.cboEquipo.Location = new System.Drawing.Point(151, 131);
             this.cboEquipo.Name = "cboEquipo";
@@ -130,6 +131,7 @@
             this.btnAgregar.TabIndex = 4;
             this.btnAgregar.Text = "AGREGAR";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lvAlquiler
             // 
