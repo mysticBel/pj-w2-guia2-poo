@@ -39,6 +39,21 @@ namespace pj_w2_guia2
             objP.numAlquiler = int.Parse(lblNumero.Text);
             objP.equipo = cboEquipo.Text;
             objP.numDias = int.Parse(txtDias.Text);
+
+            double precio = objP.asignarPrecio();
+            double subtotal = objP.calcularSubtotal();
+            double descuento = objP.calcularDescuento();
+            double neto = objP.calcularNeto();  
+
+            //Nuevo objeto ObjP añadido a la tabla ListView
+            ListViewItem fila = new ListViewItem(objP.numAlquiler.ToString());
+            fila.SubItems.Add(objP.equipo);
+            fila.SubItems.Add(objP.numDias.ToString());
+            fila.SubItems.Add(precio.ToString("0.00"));
+            fila.SubItems.Add(subtotal.ToString("0.00"));
+            fila.SubItems.Add(descuento.ToString("0.00"));
+            fila.SubItems.Add(neto.ToString("0.00"));
+            lvAlquiler.Items.Add(fila);
         }
     }
 }
