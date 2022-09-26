@@ -39,7 +39,7 @@ namespace pj_w2_guia2
 
         //3. calcular el dscto del 5% todos los equipos solo para la sede central.
         //-no se ingresa el precio, ya se tiene una tabla de precios
-        public double calcularDescuento(){
+        public virtual double calcularDescuento(){
             return 0.05 * calcularSubtotal();
         }
 
